@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>Student</title>
+{% endblock %}
+
+
+{% block content %}
+<body>
+ <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Add Student">
+    <input type="reset" value="Reset">
+ </form>
+</body>
+{% endblock %}
